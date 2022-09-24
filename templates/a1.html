@@ -1,0 +1,190 @@
+{%load static%}
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Launcher &mdash; Free Website Template, Free HTML5 Template by FreeHTML5.co</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
+	<meta name="keywords"
+		content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
+	<meta name="author" content="FreeHTML5.co" />
+
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="" />
+	<meta property="og:image" content="" />
+	<meta property="og:url" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:description" content="" />
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+
+	<!-- Animate.css' %} -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js %}"></script>
+	<![endif]-->
+
+	<style>
+		.box {
+			color: black;
+		}
+		*{
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="fh5co-loader"></div>
+
+	<aside id="fh5co-aside" role="sidebar" class="text-center"
+		style="background-image: url(static/images/img_bg_1_gradient.jpg);">
+		<h1 id="fh5co-logo"><a href="">launcher</a></h1>
+		<iframe src="https://giphy.com/embed/3osxYzIQRqN4DOEddC" width="auto" height="361" frameBorder="0"
+			class="giphy-embed" allowFullScreen></iframe>
+		<p><a href="https://giphy.com/gifs/warnerarchive-the-new-adventures-of-gilligan-3osxYzIQRqN4DOEddC">via
+				GIPHY</a></p>
+	</aside>
+
+	<div id="fh5co-main-content">
+		<div class="dt js-dt">
+			<div class="dtc js-dtc">
+				<!-- <div class="simply-countdown-one animate-box" data-animate-effect="fadeInUp"></div> -->
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="fh5co-intro animate-box">
+									<h2>How's the Weather there ....?</h2>
+									<p>get the weather conditions of any city from here before you get on there!!.</p>
+								</div>
+							</div>
+
+							<div class="col-lg-7 animate-box">
+								<form action="#" id="fh5co-subscribe">
+									<div class="form-group">
+										<input type="text" class="form-control" name="search" placeholder="search for a city">
+										<input type="submit" value="Search" class="btn btn-primary">
+										<!-- <p class="tip">Please enter your email address for early access.</p> -->
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="row">
+				{% for cityWeather in weatherData %}
+				<div class="col-sm-6">
+					<div class="card">
+					  <div class="card-body">
+					<img src="http://openweathermap.org/img/w/{{cityWeather.icon}}.png" class="icon" alt="icon">
+						<h5 class="card-title">{{cityWeather.city}}</h5>
+						<p class="card-text">Temperature {{cityWeather.temperature}}°c</p>
+						<a href="#" class="btn btn-primary">description</a>
+					  </div>
+					</div>
+				  </div>
+				  
+				{% endfor %}
+			</div>
+			</div>
+		<div id="fh5co-footer">
+			<div class="row">
+				<div class="col-md-6">
+					<ul id="fh5co-social">
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-instagram"></i></a></li>
+						<li><a href="#"><i class="icon-google-plus"></i></a></li>
+						<li><a href="#"><i class="icon-pinterest-square"></i></a></li>
+					</ul>
+				</div>
+				<div class="col-md-6 ">
+					<p>Front-end esigned by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a></p>
+					<p>Back-end esigned by <a href="http://freehtml5.co/" target="_blank">Manoj Kumar Vaduka</a></p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	
+
+	<!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Count Down -->
+	<script src="{% static 'js/simplyCountdown.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
+
+
+
+<!-- <div class="card" style="width: 18rem;">
+			<div class="card-body">
+			  <h5 class="card-title">Card title</h5>
+			  <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+			  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+			  <a href="#" class="card-link">Card link</a>
+			  <a href="#" class="card-link">Another link</a>
+			</div>
+		  </div> -->
+		<!-- <section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column is-offset-4 is-4">
+						<div class="box">
+							<article class="media">
+								<div class="media-left">
+									<figure class="image id-50x50">
+										<img src="http://openweathermap.org/img/w/{{cityWeather.icon}}.png"
+											alt="icon">
+									</figure>
+								</div>
+								<div class="media-content">
+									<div class="content">
+										<p>
+											<span class="title">{{cityWeather.city}}</span>
+											<br>
+											<span class="subtitle">{{cityWeather.temperature}}°c</span>
+											<br>{{cityWeather.description}}
+										</p>
+									</div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
